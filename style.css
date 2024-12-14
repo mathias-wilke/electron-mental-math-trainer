@@ -1,0 +1,116 @@
+/* Allgemeine Einstellungen */
+body {
+    background-color: #282c34; /* Dunkler, neutraler Hintergrund */
+    color: #e1e1e6; /* Hellgrauer Text für gute Lesbarkeit */
+    font-family: 'Inter', sans-serif; /* Moderne Schriftart */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 20px; /* Einheitlicher Abstand zwischen allen Elementen */
+  }
+  
+  /* Überschrift */
+  h1 {
+    font-size: 2.4em;
+    font-weight: 700;
+    color: #61dafb; /* Helles Blau für Akzente */
+    text-align: center;
+    margin: 0; /* Keine zusätzlichen Abstände, da body den Abstand regelt */
+  }
+  
+  /* Aufgabe-Text */
+  #task {
+    font-size: 1.5em;
+    font-weight: 500;
+    padding: 10px;
+    background-color: #3a3f4b; /* Leicht kontrastierter Bereich */
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+  }
+  
+  /* Eingabefeld */
+  #userInput {
+    width: 80%;
+    font-size: 1.2em;
+    padding: 12px;
+    border: 1px solid #61dafb; /* Subtiler Akzent */
+    border-radius: 8px;
+    background-color: #2e323d; /* Neutraler Input-Hintergrund */
+    color: #e1e1e6;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  #userInput:focus {
+    border-color: #80e8ff; /* Helleres Blau bei Fokus */
+    box-shadow: 0 0 8px rgba(97, 218, 251, 0.5);
+  }
+  
+  /* Button */
+  input[type="button"] {
+    font-size: 1em;
+    font-weight: 600;
+    padding: 12px 25px;
+    background-color: #61dafb; /* Helles Blau */
+    color: #282c34; /* Kontrastfarbe */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="button"]:hover {
+    background-color: #80e8ff; /* Heller bei Hover */
+  }
+  
+  input[type="button"]:active {
+    background-color: #4bb7d6; /* Leicht dunkler bei Klick */
+  }
+  
+  /* Zähler-Text */
+  #correctCount, #wrongCount, #streakCount {
+    font-size: 1em;
+    font-weight: 500;
+    padding: 10px;
+    background-color: #3a3f4b;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    margin: 0; /* Entfernt individuelle Abstände */
+  }
+  
+  /* Einheitliche Abstände */
+  body > * {
+    margin: 0; /* Setzt die Standard-Margins auf 0 */
+  }
+  
+  body {
+    gap: 20px; /* Definiert einheitliche Abstände zwischen allen direkten Kindelementen */
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2em;
+    }
+  
+    #task, #correctCount, #wrongCount, #streakCount {
+      font-size: 1.2em;
+    }
+  
+    #userInput {
+      font-size: 1em;
+    }
+  
+    input[type="button"] {
+      font-size: 0.9em;
+      padding: 10px 20px;
+    }
+  }
+  
