@@ -1,24 +1,45 @@
 {
-  "name": "electron-kopfrechentrainer",
+  "name": "math-trainer",
   "version": "1.0.0",
-  "description": "Kopfrechentrainer mit JavaScript und Electron",
+  "description": "A math trainer built with Electron",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
-  "repository": {
-    "type": "git",
-    "url": "electron-kopfrechentrainer"
-  },
-  "keywords": [
-    "electron",
-    "javascript",
-    "kopfrechentrainer"
-  ],
-  "author": "mathias-wilke",
-  "license": "ISC",
   "devDependencies": {
-    "electron": "^33.2.1"
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+    "electron": "^26.1.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "authors": "Mathias Wilke",
+            "description": "A math trainer built with Electron"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
   }
 }
