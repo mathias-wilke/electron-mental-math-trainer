@@ -82,6 +82,4 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 ---
 
 ## **Screenshots**
-
-Include a screenshot of your app here to make the README more visually appealing:
 ![Math Trainer Screenshot](mmt-screenshot.png)
